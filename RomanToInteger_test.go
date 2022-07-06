@@ -16,7 +16,7 @@ var romanToIntTestCases = []romanToIntTestPair{
 	{"MCMXCIV", 1994},
 }
 
-func romanToIntTestEval(t *testing.T) {
+func TestEvalRomanToInt(t *testing.T) {
 	for _, pair := range romanToIntTestCases {
 		var newOut = romanToInt(pair.input)
 		if !reflect.DeepEqual(newOut, pair.out) {
