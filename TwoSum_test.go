@@ -23,7 +23,7 @@ func TestEvalTwoSum(t *testing.T) {
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
 				"For", pair.input_n,
-				" and ", pair.input_t,
+				"and", pair.input_t,
 				"expected", pair.out,
 				"got", newOut,
 			)
