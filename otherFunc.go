@@ -2,7 +2,7 @@ package leetcode
 
 func generateListNode(array []int) *ListNode {
 	if len(array) == 0 {
-		return &ListNode{}
+		return nil
 	}
 
 	var outList = &ListNode{array[0], nil}
