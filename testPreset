@@ -1,0 +1,28 @@
+
+package leetcode
+
+import (
+	"reflect"
+	"testing"
+)
+
+type TestPair struct {
+	input []string
+	out   string
+}
+
+var TestCases = []TestPair{
+	{},
+
+func TestEval(t *testing.T) {
+	for _, pair := range TestCases {
+		var newOut = (pair.input)
+		if !reflect.DeepEqual(newOut, pair.out) {
+			t.Error(
+				"For", pair.input,
+				"expected", pair.out,
+				"got", newOut,
+			)
+		}
+	}
+}
