@@ -1,12 +1,20 @@
 package leetcode
 
 func generateListNode(array []int) *ListNode {
+	if len(array) == 0 {
+		return &ListNode{}
+	}
+
 	var outList = &ListNode{array[0], nil}
 
 	array = array[1:]
 
+	var curList = outList
+
 	for _, elem := range array {
-		outList = &ListNode{elem, outList}
+		curList.Next = &ListNode{elem, nil}
+		curList = curList.Next
 	}
+
 	return outList
 }
