@@ -1,5 +1,10 @@
 package leetcode
 
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
 func generateListNode(array []int) *ListNode {
 	if len(array) == 0 {
 		return nil
@@ -17,4 +22,10 @@ func generateListNode(array []int) *ListNode {
 	}
 
 	return outList
+}
+
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
