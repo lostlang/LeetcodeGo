@@ -30,23 +30,41 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func generateTreeNode(array []int) *TreeNode {
+func generateTreeNode(array []interface{}) *TreeNode {
 
 	if len(array) == 0 {
 		return nil
 	}
 
-	var outTree = &TreeNode{array[0], nil, nil}
+	var outTree = &TreeNode{array[0].(int), nil, nil}
+
+	var currentLevel = []*TreeNode{outTree}
+	var nextLevel = []*TreeNode{}
+	var newNode *TreeNode
 
 	array = array[1:]
-	// Face realization
+
 	for index, elem := range array {
-		if index%2 == 0 {
-			outTree.Left = &TreeNode{elem, nil, nil}
+
+		if len(currentLevel) == 0 {
+			currentLevel = nextLevel
+		}
+
+		if elem != nil {
+			newNode = &TreeNode{elem.(int), nil, nil}
+			nextLevel = append(nextLevel, newNode)
 		} else {
-			outTree.Right = &TreeNode{elem, nil, nil}
+			newNode = nil
+		}
+
+		if index%2 == 0 {
+			currentLevel[0].Left = newNode
+		} else {
+			currentLevel[0].Right = newNode
+			currentLevel = currentLevel[1:]
 		}
 
 	}
+
 	return outTree
 }

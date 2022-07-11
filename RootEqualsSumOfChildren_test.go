@@ -11,8 +11,8 @@ type checkTreeTestPair struct {
 }
 
 var checkTreeTestCases = []checkTreeTestPair{
-	{generateTreeNode([]int{10, 4, 6}), true},
-	{generateTreeNode([]int{5, 3, 1}), false},
+	{generateTreeNode([]interface{}{10, 4, 6}), true},
+	{generateTreeNode([]interface{}{5, 3, 1}), false},
 }
 
 func TestEvalCheckTree(t *testing.T) {
