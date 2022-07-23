@@ -24,6 +24,10 @@ func generateListNode(array []int) *ListNode {
 	return outList
 }
 
+func (node ListNode) New(array []int) *ListNode {
+	return generateListNode(array)
+}
+
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -67,4 +71,29 @@ func generateTreeNode(array []interface{}) *TreeNode {
 	}
 
 	return outTree
+}
+
+func (node TreeNode) New(array []interface{}) *TreeNode {
+	return generateTreeNode(array)
+}
+
+type Node struct {
+	Val      int
+	Children []*Node
+}
+
+func generateNode(array []interface{}) *Node {
+	if len(array) == 0 {
+		return nil
+	}
+
+	var outNode = &Node{array[0].(int), nil}
+
+	// TODO
+
+	return outNode
+}
+
+func (node Node) New(array []interface{}) *Node {
+	return generateNode(array)
 }
