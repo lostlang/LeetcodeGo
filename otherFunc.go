@@ -88,8 +88,29 @@ func generateNode(array []interface{}) *Node {
 	}
 
 	var outNode = &Node{array[0].(int), nil}
+	array = array[1:]
 
-	// TODO
+	var currentLevel = []*Node{outNode}
+	var nextLevel = []*Node{outNode}
+	var newNode *Node
+
+	for _, val := range array {
+		if val == nil {
+			currentLevel = currentLevel[1:]
+
+			if len(currentLevel) == 0 {
+				currentLevel = nextLevel
+				nextLevel = []*Node{}
+			}
+		} else {
+			newNode = &Node{val.(int), nil}
+			if currentLevel[0].Children == nil {
+				currentLevel[0].Children = []*Node{}
+			}
+			currentLevel[0].Children = append(currentLevel[0].Children, newNode)
+			nextLevel = append(nextLevel, newNode)
+		}
+	}
 
 	return outNode
 }
