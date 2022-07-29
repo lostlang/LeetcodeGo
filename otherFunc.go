@@ -118,3 +118,13 @@ func generateNode(array []interface{}) *Node {
 func (node Node) New(array []interface{}) *Node {
 	return generateNode(array)
 }
+
+func stringToHashmapByte(str string) map[byte]int {
+	var hash = make(map[byte]int)
+
+	for i := range str {
+		hash[str[i]]++
+	}
+
+	return hash
+}
