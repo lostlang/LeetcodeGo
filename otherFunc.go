@@ -1,5 +1,7 @@
 package leetcode
 
+import "fmt"
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -49,9 +51,12 @@ func generateTreeNode(array []interface{}) *TreeNode {
 	array = array[1:]
 
 	for index, elem := range array {
+		fmt.Println(currentLevel)
+		fmt.Println(nextLevel)
 
 		if len(currentLevel) == 0 {
 			currentLevel = nextLevel
+			nextLevel = []*TreeNode{}
 		}
 
 		if elem != nil {
