@@ -12,9 +12,9 @@ type isAlienSortedTestPair struct {
 }
 
 var isAlienSortedTestCases = []isAlienSortedTestPair{
-	// {[]string{"hello", "leetcode"}, "hlabcdefgijkmnopqrstuvwxyz", true},
-	// {[]string{"word", "world", "row"}, "worldabcefghijkmnpqstuvxyz", false},
-	// {[]string{"apple", "app"}, "abcdefghijklmnopqrstuvwxyz", false},
+	{[]string{"hello", "leetcode"}, "hlabcdefgijkmnopqrstuvwxyz", true},
+	{[]string{"word", "world", "row"}, "worldabcefghijkmnpqstuvxyz", false},
+	{[]string{"apple", "app"}, "abcdefghijklmnopqrstuvwxyz", false},
 }
 
 func TestEvalIsAlienSorted(t *testing.T) {
