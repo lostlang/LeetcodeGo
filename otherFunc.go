@@ -128,3 +128,13 @@ func stringToHashmapByte(str string) map[byte]int {
 
 	return hash
 }
+
+func stringToHashmapRune(str string) map[rune]int {
+	var hash = make(map[rune]int)
+
+	for _, val := range str {
+		hash[val]++
+	}
+
+	return hash
+}
