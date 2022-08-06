@@ -19,13 +19,3 @@ func intersection(nums1 []int, nums2 []int) []int {
 
 	return out
 }
-
-func intToHash(arr []int) map[int]int {
-	var out = make(map[int]int)
-
-	for _, val := range arr {
-		out[val]++
-	}
-
-	return out
-}

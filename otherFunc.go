@@ -138,3 +138,13 @@ func stringToHashmapRune(str string) map[rune]int {
 
 	return hash
 }
+
+func intToHash(arr []int) map[int]int {
+	var out = make(map[int]int)
+
+	for _, val := range arr {
+		out[val]++
+	}
+
+	return out
+}
