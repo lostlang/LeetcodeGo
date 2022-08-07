@@ -148,3 +148,23 @@ func intToHash(arr []int) map[int]int {
 
 	return out
 }
+
+func stringToArrayInts(s string) []int {
+	var out []int
+
+	for _, char := range s {
+		out = append(out, int(char-'0'))
+	}
+
+	return out
+}
+
+func reverseInts(a []int) []int {
+	var out []int
+
+	for i := len(a) - 1; i >= 0; i-- {
+		out = append(out, a[i])
+	}
+
+	return out
+}
