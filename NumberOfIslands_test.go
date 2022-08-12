@@ -11,8 +11,8 @@ type numIslandsTestPair struct {
 }
 
 var numIslandsTestCases = []numIslandsTestPair{
-	// {[][]byte{[]byte{1, 1, 0, 0, 0}, []byte{1, 1, 0, 0, 0}, []byte{0, 0, 1, 0, 0}, []byte{0, 0, 0, 1, 1}}, 3},
-	// {[][]byte{[]byte{1, 1, 1, 1, 0}, []byte{1, 1, 0, 1, 0}, []byte{1, 1, 0, 0, 0}, []byte{0, 0, 0, 0, 0}}, 1},
+	{[][]byte{[]byte{1, 1, 0, 0, 0}, []byte{1, 1, 0, 0, 0}, []byte{0, 0, 1, 0, 0}, []byte{0, 0, 0, 1, 1}}, 3},
+	{[][]byte{[]byte{1, 1, 1, 1, 0}, []byte{1, 1, 0, 1, 0}, []byte{1, 1, 0, 0, 0}, []byte{0, 0, 0, 0, 0}}, 1},
 }
 
 func TestEvalNumIslands(t *testing.T) {
