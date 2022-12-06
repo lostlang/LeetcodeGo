@@ -1,5 +1,7 @@
 package leetcode
 
+import "fmt"
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -167,4 +169,12 @@ func reverseInts(a []int) []int {
 	}
 
 	return out
+}
+
+func printListNode(head *ListNode) {
+	for head != nil {
+		fmt.Print(head.Val)
+		head = head.Next
+	}
+	fmt.Println()
 }
