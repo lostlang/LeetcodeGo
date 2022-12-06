@@ -1,11 +1,7 @@
 package leetcode
 
 func rotateRight(head *ListNode, k int) *ListNode {
-	if head == nil {
-		return nil
-	}
-
-	if head.Next == nil {
+	if head == nil || head.Next == nil {
 		return head
 	}
 
@@ -16,10 +12,16 @@ func rotateRight(head *ListNode, k int) *ListNode {
 		length++
 	}
 	k = k % length
+	k = length - k
+
+	if k == 0 {
+		return head
+	}
 
 	cur = head.Next
 	var copyHead = &ListNode{head.Val, nil}
 	var copyHeadStart = copyHead
+	k--
 
 	for ; k > 0; k-- {
 		var newHead = &ListNode{cur.Val, nil}
@@ -29,6 +31,11 @@ func rotateRight(head *ListNode, k int) *ListNode {
 	}
 
 	var out = cur
+
+	if cur == nil {
+		return copyHeadStart
+	}
+
 	for cur.Next != nil {
 		cur = cur.Next
 	}

@@ -14,6 +14,8 @@ type rotateRightTestPair struct {
 var rotateRightTestCases = []rotateRightTestPair{
 	{generateListNode([]int{1, 2, 3, 4, 5}), 2, generateListNode([]int{4, 5, 1, 2, 3})},
 	{generateListNode([]int{0, 1, 2}), 4, generateListNode([]int{2, 0, 1})},
+	{generateListNode([]int{1, 2}), 0, generateListNode([]int{1, 2})},
+	{generateListNode([]int{1, 2}), 1, generateListNode([]int{2, 1})},
 }
 
 func TestEvalRotateRight(t *testing.T) {
