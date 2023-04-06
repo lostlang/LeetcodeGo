@@ -19,12 +19,12 @@ var addBinaryTestCases = []addBinaryTestPair{
 
 func TestEvalAddBinary(t *testing.T) {
 	for _, pair := range addBinaryTestCases {
-		newOut := addBinary(pair.inputA, pair.inputB)
-		if !reflect.DeepEqual(newOut, pair.output) {
+		newOutput := addBinary(pair.inputA, pair.inputB)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
 				"For", pair.inputA, pair.inputB,
 				"expected", pair.output,
-				"got", newOut,
+				"got", newOutput,
 			)
 		}
 	}

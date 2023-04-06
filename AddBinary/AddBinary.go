@@ -2,7 +2,7 @@ package addbinary
 
 func addBinary(a string, b string) string {
 	output := ""
-	var tmpBit bool
+	tmpBit := false
 
 	if len(a) < len(b) {
 		a, b = b, a
