@@ -1,4 +1,4 @@
-package backspacestringcompare
+package BackspaceStringCompare
 
 import (
 	"reflect"

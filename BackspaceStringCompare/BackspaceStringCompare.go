@@ -1,4 +1,4 @@
-package backspacestringcompare
+package BackspaceStringCompare
 
 func backspaceCompare(s string, t string) bool {
 	s = backspaceConvert(s)
