@@ -1,4 +1,4 @@
-package leetcode
+package arrangingcoins
 
 import (
 	"reflect"
@@ -6,8 +6,8 @@ import (
 )
 
 type arrangeCoinsTestPair struct {
-	input int
-	out   int
+	input  int
+	output int
 }
 
 var arrangeCoinsTestCases = []arrangeCoinsTestPair{
@@ -19,12 +19,12 @@ var arrangeCoinsTestCases = []arrangeCoinsTestPair{
 
 func TestEvalArrangeCoins(t *testing.T) {
 	for _, pair := range arrangeCoinsTestCases {
-		var newOut = arrangeCoins(pair.input)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOutput := arrangeCoins(pair.input)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
 				"For", pair.input,
-				"expected", pair.out,
-				"got", newOut,
+				"expected", pair.output,
+				"got", newOutput,
 			)
 		}
 	}
