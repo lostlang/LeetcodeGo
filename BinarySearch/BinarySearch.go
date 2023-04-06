@@ -1,11 +1,11 @@
-package leetcode
+package BinarySearch
 
 func search(nums []int, target int) int {
-	var left = 0
-	var right = len(nums) - 1
+	left := 0
+	right := len(nums) - 1
 
 	for left <= right {
-		var pivot = left + (right-left)/2
+		pivot := left + (right-left)/2
 
 		if nums[pivot] > target {
 			right = pivot - 1
@@ -18,3 +18,5 @@ func search(nums []int, target int) int {
 
 	return -1
 }
+
+var Search = search

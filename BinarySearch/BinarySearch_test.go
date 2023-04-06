@@ -1,4 +1,4 @@
-package leetcode
+package BinarySearch
 
 import (
 	"reflect"
@@ -8,7 +8,7 @@ import (
 type searchTestPair struct {
 	inputArray  []int
 	inputTarget int
-	out         int
+	output      int
 }
 
 var searchTestCases = []searchTestPair{
@@ -21,13 +21,12 @@ var searchTestCases = []searchTestPair{
 
 func TestEvalSearch(t *testing.T) {
 	for _, pair := range searchTestCases {
-		var newOut = search(pair.inputArray, pair.inputTarget)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOutput := search(pair.inputArray, pair.inputTarget)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
-				"For", pair.inputArray,
-				"and", pair.inputTarget,
-				"expected", pair.out,
-				"got", newOut,
+				"For", pair.inputArray, pair.inputTarget,
+				"expected", pair.output,
+				"got", newOutput,
 			)
 		}
 	}
