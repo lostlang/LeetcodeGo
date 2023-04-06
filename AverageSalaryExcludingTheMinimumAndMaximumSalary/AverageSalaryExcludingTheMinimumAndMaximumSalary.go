@@ -1,4 +1,4 @@
-package averagesalaryexcludingtheminimumandmaximumsalary
+package AverageSalaryExcludingTheMinimumAndMaximumSalary
 
 func average(salary []int) float64 {
 	maxNum, minNum := salary[0], salary[0]

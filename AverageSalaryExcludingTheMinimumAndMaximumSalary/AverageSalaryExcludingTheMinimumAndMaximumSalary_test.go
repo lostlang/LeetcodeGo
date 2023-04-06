@@ -1,4 +1,4 @@
-package averagesalaryexcludingtheminimumandmaximumsalary
+package AverageSalaryExcludingTheMinimumAndMaximumSalary
 
 import (
 	"reflect"
