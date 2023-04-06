@@ -1,4 +1,4 @@
-package addbinary
+package AddBinary
 
 import (
 	"reflect"
