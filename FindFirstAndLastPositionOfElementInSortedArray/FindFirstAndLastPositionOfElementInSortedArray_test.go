@@ -1,4 +1,4 @@
-package leetcode
+package FindFirstAndLastPositionOfElementInSortedArray
 
 import (
 	"reflect"
@@ -8,7 +8,7 @@ import (
 type searchRangeTestPair struct {
 	inputArr    []int
 	inputTarget int
-	out         []int
+	output      []int
 }
 
 var searchRangeTestCases = []searchRangeTestPair{
@@ -20,13 +20,12 @@ var searchRangeTestCases = []searchRangeTestPair{
 
 func TestEvalSearchRange(t *testing.T) {
 	for _, pair := range searchRangeTestCases {
-		var newOut = searchRange(pair.inputArr, pair.inputTarget)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOutput := searchRange(pair.inputArr, pair.inputTarget)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
-				"For", pair.inputArr,
-				"and", pair.inputTarget,
-				"expected", pair.out,
-				"got", newOut,
+				"For", pair.inputArr, pair.inputTarget,
+				"expected", pair.output,
+				"got", newOutput,
 			)
 		}
 	}

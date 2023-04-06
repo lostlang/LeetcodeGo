@@ -1,4 +1,10 @@
-package leetcode
+package FindFirstAndLastPositionOfElementInSortedArray
+
+import (
+	"leetcode/BinarySearch"
+)
+
+var search = BinarySearch.Search
 
 func searchRange(nums []int, target int) []int {
 	if len(nums) == 0 {
