@@ -19,13 +19,12 @@ var addToArrayFormTestCases = []addToArrayFormTestPair{
 
 func TestEvalAddToArrayForm(t *testing.T) {
 	for _, pair := range addToArrayFormTestCases {
-		newOut := addToArrayForm(pair.inputArr, pair.inputK)
-		if !reflect.DeepEqual(newOut, pair.output) {
+		newOutput := addToArrayForm(pair.inputArr, pair.inputK)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
-				"For", pair.inputArr,
-				"and", pair.inputK,
+				"For", pair.inputArr, pair.inputK,
 				"expected", pair.output,
-				"got", newOut,
+				"got", newOutput,
 			)
 		}
 	}
