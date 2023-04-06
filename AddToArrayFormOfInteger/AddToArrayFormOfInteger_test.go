@@ -1,4 +1,4 @@
-package leetcode
+package addtoarrayformofinteger
 
 import (
 	"reflect"
@@ -8,7 +8,7 @@ import (
 type addToArrayFormTestPair struct {
 	inputArr []int
 	inputK   int
-	out      []int
+	output   []int
 }
 
 var addToArrayFormTestCases = []addToArrayFormTestPair{
@@ -19,12 +19,12 @@ var addToArrayFormTestCases = []addToArrayFormTestPair{
 
 func TestEvalAddToArrayForm(t *testing.T) {
 	for _, pair := range addToArrayFormTestCases {
-		var newOut = addToArrayForm(pair.inputArr, pair.inputK)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOut := addToArrayForm(pair.inputArr, pair.inputK)
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
 				"For", pair.inputArr,
 				"and", pair.inputK,
-				"expected", pair.out,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}
