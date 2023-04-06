@@ -1,4 +1,4 @@
-package leetcode
+package amountoftimeforbinarytreetobeinfected
 
 import "leetcode/utils"
 
