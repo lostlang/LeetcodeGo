@@ -1,4 +1,4 @@
-package leetcode
+package addstrings
 
 import (
 	"reflect"
@@ -8,7 +8,7 @@ import (
 type addStringsTestPair struct {
 	inputS1 string
 	inputS2 string
-	out     string
+	output  string
 }
 
 var addStringsTestCases = []addStringsTestPair{
@@ -19,12 +19,11 @@ var addStringsTestCases = []addStringsTestPair{
 
 func TestEvalAddStrings(t *testing.T) {
 	for _, pair := range addStringsTestCases {
-		var newOut = addStrings(pair.inputS1, pair.inputS2)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOut := addStrings(pair.inputS1, pair.inputS2)
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
-				"For", pair.inputS1,
-				"and", pair.inputS2,
-				"expected", pair.out,
+				"For", pair.inputS1, pair.inputS2,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}
