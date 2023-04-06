@@ -1,4 +1,4 @@
-package addtwonumbers
+package AddTwoNumbers
 
 import "leetcode/utils"
 
