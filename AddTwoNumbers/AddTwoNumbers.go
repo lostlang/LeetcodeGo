@@ -1,28 +1,29 @@
-package leetcode
+package addtwonumbers
+
+import "leetcode/utils"
+
+type ListNode = utils.ListNode
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	var out = &ListNode{}
-	var current = out
-	var flag = false
+	output := &ListNode{}
+	current := output
+	flag := false
 
 	for l1 != nil || l2 != nil {
-		var sum = 0
+		sum := 0
 
 		if l1 != nil {
 			sum += l1.Val
 			l1 = l1.Next
 		}
-
 		if l2 != nil {
 			sum += l2.Val
 			l2 = l2.Next
 		}
-
 		if flag {
 			sum++
 			flag = false
 		}
-
 		if sum >= 10 {
 			sum -= 10
 			flag = true
@@ -34,12 +35,11 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	for l1 != nil {
-		var val = l1.Val
+		val := l1.Val
 		if flag {
 			val++
 			flag = false
 		}
-
 		if val >= 10 {
 			val -= 10
 			flag = true
@@ -52,12 +52,11 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	for l2 != nil {
-		var val = l2.Val
+		val := l2.Val
 		if flag {
 			val++
 			flag = false
 		}
-
 		if val >= 10 {
 			val -= 10
 			flag = true
@@ -73,7 +72,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		current.Val = 1
 	}
 
-	var cur = out
+	cur := output
 	for cur.Next != nil {
 		if cur.Next.Next == nil && cur.Next.Val == 0 {
 			cur.Next = nil
@@ -82,5 +81,5 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		cur = cur.Next
 	}
 
-	return out
+	return output
 }
