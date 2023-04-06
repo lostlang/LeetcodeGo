@@ -1,4 +1,4 @@
-package leetcode
+package anumberafteradoublereversal
 
 import (
 	"reflect"
@@ -18,7 +18,7 @@ var isSameAfterReversalsTestCases = []isSameAfterReversalsTestPair{
 
 func TestEvalIsSameAfterReversals(t *testing.T) {
 	for _, pair := range isSameAfterReversalsTestCases {
-		var newOut = isSameAfterReversals(pair.input)
+		newOut := isSameAfterReversals(pair.input)
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
 				"For", pair.input,

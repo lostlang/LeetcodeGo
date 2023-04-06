@@ -1,4 +1,4 @@
-package leetcode
+package anumberafteradoublereversal
 
 func isSameAfterReversals(num int) bool {
 	if num == 0 {
