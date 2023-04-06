@@ -18,11 +18,11 @@ var maxProfitTestCases = []maxProfitTestPair{
 func TestEvalMaxProfit(t *testing.T) {
 	for _, pair := range maxProfitTestCases {
 		newOutput := maxProfit(pair.input)
-		if !reflect.DeepEqual(newOut, pair.output) {
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
 				"For", pair.input,
 				"expected", pair.output,
-				"got", newOut,
+				"got", newOutput,
 			)
 		}
 	}
