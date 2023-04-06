@@ -1,4 +1,4 @@
-package addtwointegers
+package AddTwoIntegers
 
 import (
 	"reflect"
