@@ -1,11 +1,10 @@
-package leetcode
+package BestPokerHand
 
 func bestHand(ranks []int, suits []byte) string {
+	hashRanks := make(map[int]int)
+	hachSuits := make(map[byte]int)
 
-	var hashRanks = make(map[int]int)
-	var hachSuits = make(map[byte]int)
-
-	var maxRank, maxSuit int
+	maxRank, maxSuit := 0, 0
 
 	for _, val := range ranks {
 		hashRanks[val]++

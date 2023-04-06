@@ -1,4 +1,4 @@
-package leetcode
+package BestPokerHand
 
 import (
 	"reflect"
@@ -8,7 +8,7 @@ import (
 type bestHandTestPair struct {
 	inputRank []int
 	inputSuit []byte
-	out       string
+	output    string
 }
 
 var bestHandTestCases = []bestHandTestPair{
@@ -19,13 +19,13 @@ var bestHandTestCases = []bestHandTestPair{
 
 func TestEvalBestHand(t *testing.T) {
 	for _, pair := range bestHandTestCases {
-		var newOut = bestHand(pair.inputRank, pair.inputSuit)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOutput := bestHand(pair.inputRank, pair.inputSuit)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
 				"For", pair.inputRank,
 				"and", pair.inputSuit,
-				"expected", pair.out,
-				"got", newOut,
+				"expected", pair.output,
+				"got", newOutput,
 			)
 		}
 	}
