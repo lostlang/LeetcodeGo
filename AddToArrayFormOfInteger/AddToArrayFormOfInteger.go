@@ -1,4 +1,4 @@
-package addtoarrayformofinteger
+package AddToArrayFormOfInteger
 
 func addToArrayForm(num []int, k int) []int {
 	output := []int{}

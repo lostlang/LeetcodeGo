@@ -1,4 +1,4 @@
-package addtoarrayformofinteger
+package AddToArrayFormOfInteger
 
 import (
 	"reflect"
