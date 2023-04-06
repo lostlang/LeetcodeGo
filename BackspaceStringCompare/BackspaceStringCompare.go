@@ -1,4 +1,4 @@
-package leetcode
+package backspacestringcompare
 
 func backspaceCompare(s string, t string) bool {
 	s = backspaceConvert(s)
@@ -8,9 +8,9 @@ func backspaceCompare(s string, t string) bool {
 }
 
 func backspaceConvert(s string) string {
-	var rS = []rune(s)
+	rS := []rune(s)
 
-	var i int
+	i := 0
 
 	for i < len(rS) {
 		if rS[i] != '#' {
@@ -23,7 +23,6 @@ func backspaceConvert(s string) string {
 				rS = rS[1:]
 			}
 		}
-
 	}
 
 	return string(rS)

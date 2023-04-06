@@ -1,4 +1,4 @@
-package leetcode
+package backspacestringcompare
 
 import (
 	"reflect"
@@ -8,7 +8,7 @@ import (
 type backspaceCompareTestPair struct {
 	inputS string
 	inputT string
-	out    bool
+	output bool
 }
 
 var backspaceCompareTestCases = []backspaceCompareTestPair{
@@ -20,13 +20,12 @@ var backspaceCompareTestCases = []backspaceCompareTestPair{
 
 func TestEvalBackspaceCompare(t *testing.T) {
 	for _, pair := range backspaceCompareTestCases {
-		var newOut = backspaceCompare(pair.inputS, pair.inputT)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOutput := backspaceCompare(pair.inputS, pair.inputT)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
-				"For", pair.inputS,
-				"and", pair.inputT,
-				"expected", pair.out,
-				"got", newOut,
+				"For", pair.inputS, pair.inputT,
+				"expected", pair.output,
+				"got", newOutput,
 			)
 		}
 	}
