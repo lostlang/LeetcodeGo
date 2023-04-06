@@ -12,11 +12,11 @@ func generateListNode(array []int) *ListNode {
 		return nil
 	}
 
-	var outList = &ListNode{array[0], nil}
+	outList := &ListNode{array[0], nil}
 
 	array = array[1:]
 
-	var curList = outList
+	curList := outList
 
 	for _, elem := range array {
 		curList.Next = &ListNode{elem, nil}
@@ -37,15 +37,14 @@ type TreeNode struct {
 }
 
 func generateTreeNode(array []interface{}) *TreeNode {
-
 	if len(array) == 0 {
 		return nil
 	}
 
-	var outTree = &TreeNode{array[0].(int), nil, nil}
+	outTree := &TreeNode{array[0].(int), nil, nil}
 
-	var currentLevel = []*TreeNode{outTree}
-	var nextLevel = []*TreeNode{}
+	currentLevel := []*TreeNode{outTree}
+	nextLevel := []*TreeNode{}
 	var newNode *TreeNode
 
 	array = array[1:]
@@ -89,11 +88,11 @@ func generateNode(array []interface{}) *Node {
 		return nil
 	}
 
-	var outNode = &Node{array[0].(int), nil}
+	outNode := &Node{array[0].(int), nil}
 	array = array[1:]
 
-	var currentLevel = []*Node{outNode}
-	var nextLevel = []*Node{outNode}
+	currentLevel := []*Node{outNode}
+	nextLevel := []*Node{outNode}
 	var newNode *Node
 
 	for _, val := range array {
@@ -122,7 +121,7 @@ func (node Node) New(array []interface{}) *Node {
 }
 
 func stringToHashmapByte(str string) map[byte]int {
-	var hash = make(map[byte]int)
+	hash := make(map[byte]int)
 
 	for i := range str {
 		hash[str[i]]++
@@ -132,7 +131,7 @@ func stringToHashmapByte(str string) map[byte]int {
 }
 
 func stringToHashmapRune(str string) map[rune]int {
-	var hash = make(map[rune]int)
+	hash := make(map[rune]int)
 
 	for _, val := range str {
 		hash[val]++
@@ -142,30 +141,10 @@ func stringToHashmapRune(str string) map[rune]int {
 }
 
 func intToHash(arr []int) map[int]int {
-	var out = make(map[int]int)
+	out := make(map[int]int)
 
 	for _, val := range arr {
 		out[val]++
-	}
-
-	return out
-}
-
-func stringToArrayInts(s string) []int {
-	var out []int
-
-	for _, char := range s {
-		out = append(out, int(char-'0'))
-	}
-
-	return out
-}
-
-func reverseInts(a []int) []int {
-	var out []int
-
-	for i := len(a) - 1; i >= 0; i-- {
-		out = append(out, a[i])
 	}
 
 	return out
