@@ -18,12 +18,12 @@ var isSameAfterReversalsTestCases = []isSameAfterReversalsTestPair{
 
 func TestEvalIsSameAfterReversals(t *testing.T) {
 	for _, pair := range isSameAfterReversalsTestCases {
-		newOut := isSameAfterReversals(pair.input)
-		if !reflect.DeepEqual(newOut, pair.output) {
+		newOutput := isSameAfterReversals(pair.input)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
 				"For", pair.input,
 				"expected", pair.output,
-				"got", newOut,
+				"got", newOutput,
 			)
 		}
 	}
