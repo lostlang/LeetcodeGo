@@ -17,12 +17,12 @@ var addDigitsTestCases = []addDigitsTestPair{
 
 func TestEvalAddDigits(t *testing.T) {
 	for _, pair := range addDigitsTestCases {
-		newOut := addDigits(pair.input)
-		if !reflect.DeepEqual(newOut, pair.output) {
+		newOutput := addDigits(pair.input)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
 				"For", pair.input,
 				"expected", pair.output,
-				"got", newOut,
+				"got", newOutput,
 			)
 		}
 	}
