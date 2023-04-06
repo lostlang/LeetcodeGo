@@ -19,12 +19,12 @@ var addStringsTestCases = []addStringsTestPair{
 
 func TestEvalAddStrings(t *testing.T) {
 	for _, pair := range addStringsTestCases {
-		newOut := addStrings(pair.inputS1, pair.inputS2)
-		if !reflect.DeepEqual(newOut, pair.output) {
+		newOutput := addStrings(pair.inputS1, pair.inputS2)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
 				"For", pair.inputS1, pair.inputS2,
 				"expected", pair.output,
-				"got", newOut,
+				"got", newOutput,
 			)
 		}
 	}
