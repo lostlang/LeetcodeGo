@@ -1,4 +1,4 @@
-package anumberafteradoublereversal
+package ANumberAfterADoubleReversal
 
 func isSameAfterReversals(num int) bool {
 	if num == 0 {

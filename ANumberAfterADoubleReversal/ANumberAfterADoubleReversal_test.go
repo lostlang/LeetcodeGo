@@ -1,4 +1,4 @@
-package anumberafteradoublereversal
+package ANumberAfterADoubleReversal
 
 import (
 	"reflect"
