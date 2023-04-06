@@ -1,4 +1,4 @@
-package leetcode
+package addbinary
 
 import (
 	"reflect"
@@ -8,7 +8,7 @@ import (
 type addBinaryTestPair struct {
 	inputA string
 	inputB string
-	out    string
+	output string
 }
 
 var addBinaryTestCases = []addBinaryTestPair{
@@ -19,12 +19,11 @@ var addBinaryTestCases = []addBinaryTestPair{
 
 func TestEvalAddBinary(t *testing.T) {
 	for _, pair := range addBinaryTestCases {
-		var newOut = addBinary(pair.inputA, pair.inputB)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOut := addBinary(pair.inputA, pair.inputB)
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
-				"For", pair.inputA,
-				"and", pair.inputB,
-				"expected", pair.out,
+				"For", pair.inputA, pair.inputB,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}

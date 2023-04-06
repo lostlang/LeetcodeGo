@@ -1,25 +1,24 @@
-package leetcode
+package addbinary
 
 func addBinary(a string, b string) string {
-	var out string
+	output := ""
 	var tmpBit bool
 
 	if len(a) < len(b) {
 		a, b = b, a
 	}
 
-	var aR = []rune(a)
-	var bR = []rune(b)
-	var dif = len(aR) - len(bR)
+	aR := []rune(a)
+	bR := []rune(b)
+	dif := len(aR) - len(bR)
 
 	for i := len(aR) - 1; i >= 0; i-- {
-
 		if i >= dif {
 			if aR[i] == bR[i-dif] {
 				if tmpBit {
-					out = "1" + out
+					output = "1" + output
 				} else {
-					out = "0" + out
+					output = "0" + output
 				}
 
 				if aR[i] == '1' {
@@ -29,28 +28,28 @@ func addBinary(a string, b string) string {
 				}
 			} else {
 				if !tmpBit {
-					out = "1" + out
+					output = "1" + output
 				} else {
-					out = "0" + out
+					output = "0" + output
 				}
 			}
 		} else {
 			if tmpBit {
 				if aR[i] == '1' {
-					out = "0" + out
+					output = "0" + output
 				} else {
-					out = "1" + out
+					output = "1" + output
 					tmpBit = false
 				}
 			} else {
-				out = string(aR[i]) + out
+				output = string(aR[i]) + output
 			}
 		}
 	}
 
 	if tmpBit {
-		out = "1" + out
+		output = "1" + output
 	}
 
-	return out
+	return output
 }
