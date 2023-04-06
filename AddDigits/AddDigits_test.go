@@ -1,4 +1,4 @@
-package leetcode
+package adddigits
 
 import (
 	"reflect"
@@ -6,8 +6,8 @@ import (
 )
 
 type addDigitsTestPair struct {
-	input int
-	out   int
+	input  int
+	output int
 }
 
 var addDigitsTestCases = []addDigitsTestPair{
@@ -17,11 +17,11 @@ var addDigitsTestCases = []addDigitsTestPair{
 
 func TestEvalAddDigits(t *testing.T) {
 	for _, pair := range addDigitsTestCases {
-		var newOut = addDigits(pair.input)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOut := addDigits(pair.input)
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
 				"For", pair.input,
-				"expected", pair.out,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}

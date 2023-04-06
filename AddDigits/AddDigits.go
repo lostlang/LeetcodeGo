@@ -1,11 +1,11 @@
-package leetcode
+package adddigits
 
 func addDigits(num int) int {
 	if num < 10 {
 		return num
 	}
 
-	var sum = 0
+	sum := 0
 
 	for num > 0 {
 		sum += num % 10
