@@ -1,6 +1,12 @@
-package leetcode
+package BinaryTreePaths
 
-import "fmt"
+import (
+	"fmt"
+
+	"leetcode/utils"
+)
+
+type TreeNode = utils.TreeNode
 
 func binaryTreePaths(root *TreeNode) []string {
 	return binaryTreePathsWithString(root, "")
