@@ -8,7 +8,7 @@ import (
 type findContentChildrenTestPair struct {
 	inputG []int
 	inputS []int
-	out    int
+	output int
 }
 
 var findContentChildrenTestCases = []findContentChildrenTestPair{
@@ -19,13 +19,12 @@ var findContentChildrenTestCases = []findContentChildrenTestPair{
 
 func TestEvalFindContentChildren(t *testing.T) {
 	for _, pair := range findContentChildrenTestCases {
-		var newOut = findContentChildren(pair.inputG, pair.inputS)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOutput := findContentChildren(pair.inputG, pair.inputS)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
-				"For", pair.inputG,
-				"and", pair.inputS,
-				"expected", pair.out,
-				"got", newOut,
+				"For", pair.inputG, pair.inputS,
+				"expected", pair.output,
+				"got", newOutput,
 			)
 		}
 	}

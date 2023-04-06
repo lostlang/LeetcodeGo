@@ -9,11 +9,11 @@ func findContentChildren(g []int, s []int) int {
 
 	sort.Ints(g)
 	sort.Ints(s)
-	var out int
+	var output int
 
 	for i, j := 0, 0; i < len(g) && j < len(s); {
 		if g[i] <= s[j] {
-			out++
+			output++
 			i++
 			j++
 		} else {
@@ -21,5 +21,5 @@ func findContentChildren(g []int, s []int) int {
 		}
 	}
 
-	return out
+	return output
 }
