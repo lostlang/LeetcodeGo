@@ -1,4 +1,4 @@
-package leetcode
+package averagesalaryexcludingtheminimumandmaximumsalary
 
 import (
 	"reflect"
@@ -6,8 +6,8 @@ import (
 )
 
 type averageTestPair struct {
-	input []int
-	out   float64
+	input  []int
+	output float64
 }
 
 var averageTestCases = []averageTestPair{
@@ -17,12 +17,12 @@ var averageTestCases = []averageTestPair{
 
 func TestEvalAverage(t *testing.T) {
 	for _, pair := range averageTestCases {
-		var newOut = average(pair.input)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOutput := average(pair.input)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
 				"For", pair.input,
-				"expected", pair.out,
-				"got", newOut,
+				"expected", pair.output,
+				"got", newOutput,
 			)
 		}
 	}

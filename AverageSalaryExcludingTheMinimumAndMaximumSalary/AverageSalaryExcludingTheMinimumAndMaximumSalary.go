@@ -1,8 +1,8 @@
-package leetcode
+package averagesalaryexcludingtheminimumandmaximumsalary
 
 func average(salary []int) float64 {
-	var maxNum, minNum = salary[0], salary[0]
-	var sumArr int
+	maxNum, minNum := salary[0], salary[0]
+	sumArr := 0
 
 	for _, val := range salary {
 		sumArr += val
