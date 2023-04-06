@@ -1,3 +1,3 @@
-module go.mod
+module leetcode
 
 go 1.20
