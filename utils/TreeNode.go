@@ -28,6 +28,8 @@ func NewTreeNode(array []interface{}) *TreeNode {
 		if elem != nil {
 			newNode = &TreeNode{elem.(int), nil, nil}
 			nextLevel = append(nextLevel, newNode)
+		} else {
+			newNode = nil
 		}
 
 		if index%2 == 0 {
