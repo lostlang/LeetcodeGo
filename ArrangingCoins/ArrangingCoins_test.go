@@ -1,4 +1,4 @@
-package arrangingcoins
+package ArrangingCoins
 
 import (
 	"reflect"
