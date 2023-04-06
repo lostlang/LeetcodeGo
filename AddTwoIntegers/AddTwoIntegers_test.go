@@ -1,4 +1,4 @@
-package leetcode
+package addtwointegers
 
 import (
 	"reflect"
@@ -8,7 +8,7 @@ import (
 type sumTestPair struct {
 	inputA int
 	inputB int
-	out    int
+	output int
 }
 
 var sumTestCases = []sumTestPair{
@@ -18,13 +18,12 @@ var sumTestCases = []sumTestPair{
 
 func TestEvalsum(t *testing.T) {
 	for _, pair := range sumTestCases {
-		var newOut = sum(pair.inputA, pair.inputB)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOutput := sum(pair.inputA, pair.inputB)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
-				"For", pair.inputA,
-				"and", pair.inputB,
-				"expected", pair.out,
-				"got", newOut,
+				"For", pair.inputA, pair.inputB,
+				"expected", pair.output,
+				"got", newOutput,
 			)
 		}
 	}
