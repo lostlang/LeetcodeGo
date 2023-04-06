@@ -1,18 +1,16 @@
-package leetcode
+package CheckIfItIsAStraightLine
 
 func checkStraightLine(coordinates [][]int) bool {
-	var difX, difY int
-	var k float64
-	var infinity bool
+	infinity := false
 
-	difX = coordinates[0][0] - coordinates[1][0]
-	difY = coordinates[0][1] - coordinates[1][1]
+	difX := coordinates[0][0] - coordinates[1][0]
+	difY := coordinates[0][1] - coordinates[1][1]
 
 	if difX == 0 {
 		infinity = true
 	}
 
-	k = float64(difY) / float64(difX)
+	k := float64(difY) / float64(difX)
 
 	for i := 1; i < len(coordinates); i++ {
 		difX = coordinates[i-1][0] - coordinates[i][0]
