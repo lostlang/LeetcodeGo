@@ -6,8 +6,8 @@ import (
 )
 
 type isSameAfterReversalsTestPair struct {
-	input int
-	out   bool
+	input  int
+	output bool
 }
 
 var isSameAfterReversalsTestCases = []isSameAfterReversalsTestPair{
@@ -19,10 +19,10 @@ var isSameAfterReversalsTestCases = []isSameAfterReversalsTestPair{
 func TestEvalIsSameAfterReversals(t *testing.T) {
 	for _, pair := range isSameAfterReversalsTestCases {
 		newOut := isSameAfterReversals(pair.input)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
 				"For", pair.input,
-				"expected", pair.out,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}
