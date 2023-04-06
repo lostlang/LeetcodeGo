@@ -1,5 +1,9 @@
 package leetcode
 
+import "leetcode/utils"
+
+type TreeNode = utils.TreeNode
+
 func amountOfTime(root *TreeNode, start int) int {
 	// if root == nil {
 	// 	return 0

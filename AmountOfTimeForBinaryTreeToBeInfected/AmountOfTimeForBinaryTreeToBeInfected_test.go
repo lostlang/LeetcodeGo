@@ -8,7 +8,7 @@ import (
 type amountOfTimeTestPair struct {
 	inputRoot  *TreeNode
 	inputStart int
-	out        int
+	output     int
 }
 
 var amountOfTimeTestCases = []amountOfTimeTestPair{
@@ -20,13 +20,12 @@ var amountOfTimeTestCases = []amountOfTimeTestPair{
 
 func TestEvalAmountOfTime(t *testing.T) {
 	for _, pair := range amountOfTimeTestCases {
-		var newOut = amountOfTime(pair.inputRoot, pair.inputStart)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOutput := amountOfTime(pair.inputRoot, pair.inputStart)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
-				"For", pair.inputRoot,
-				"and", pair.inputStart,
-				"expected", pair.out,
-				"got", newOut,
+				"For", pair.inputRoot, pair.inputStart,
+				"expected", pair.output,
+				"got", newOutput,
 			)
 		}
 	}
