@@ -1,4 +1,4 @@
-package leetcode
+package BestTimeToBuyAndSellStock
 
 import (
 	"reflect"
@@ -6,8 +6,8 @@ import (
 )
 
 type maxProfitTestPair struct {
-	input []int
-	out   int
+	input  []int
+	output int
 }
 
 var maxProfitTestCases = []maxProfitTestPair{
@@ -17,11 +17,11 @@ var maxProfitTestCases = []maxProfitTestPair{
 
 func TestEvalMaxProfit(t *testing.T) {
 	for _, pair := range maxProfitTestCases {
-		var newOut = maxProfit(pair.input)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOutput := maxProfit(pair.input)
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
 				"For", pair.input,
-				"expected", pair.out,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}
