@@ -1,4 +1,4 @@
-package assigncookies
+package AssignCookies
 
 import "sort"
 
