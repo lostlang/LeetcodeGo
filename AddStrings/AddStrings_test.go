@@ -1,4 +1,4 @@
-package addstrings
+package AddStrings
 
 import (
 	"reflect"
