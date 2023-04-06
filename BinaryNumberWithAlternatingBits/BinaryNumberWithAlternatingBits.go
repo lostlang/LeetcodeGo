@@ -1,8 +1,8 @@
-package leetcode
+package BinaryNumberWithAlternatingBits
 
 func hasAlternatingBits(n int) bool {
-	var i = 1
-	var swap bool
+	i := 1
+	swap := false
 
 	for i < n {
 		if swap {

@@ -1,4 +1,4 @@
-package leetcode
+package BinaryNumberWithAlternatingBits
 
 import (
 	"reflect"
@@ -6,8 +6,8 @@ import (
 )
 
 type hasAlternatingBitsTestPair struct {
-	input int
-	out   bool
+	input  int
+	output bool
 }
 
 var hasAlternatingBitsTestCases = []hasAlternatingBitsTestPair{
@@ -18,12 +18,12 @@ var hasAlternatingBitsTestCases = []hasAlternatingBitsTestPair{
 
 func TestEvalHasAlternatingBits(t *testing.T) {
 	for _, pair := range hasAlternatingBitsTestCases {
-		var newOut = hasAlternatingBits(pair.input)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOutput := hasAlternatingBits(pair.input)
+		if !reflect.DeepEqual(newOutput, pair.output) {
 			t.Error(
 				"For", pair.input,
-				"expected", pair.out,
-				"got", newOut,
+				"expected", pair.output,
+				"got", newOutput,
 			)
 		}
 	}
