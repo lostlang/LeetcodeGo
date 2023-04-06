@@ -1,4 +1,4 @@
-package adddigits
+package AddDigits
 
 import (
 	"reflect"

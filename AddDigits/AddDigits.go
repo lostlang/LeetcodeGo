@@ -1,4 +1,4 @@
-package adddigits
+package AddDigits
 
 func addDigits(num int) int {
 	if num < 10 {
