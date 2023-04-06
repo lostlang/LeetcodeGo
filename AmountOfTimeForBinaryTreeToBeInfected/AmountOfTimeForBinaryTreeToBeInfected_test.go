@@ -1,4 +1,4 @@
-package amountoftimeforbinarytreetobeinfected
+package AmountOfTimeForBinaryTreeToBeInfected
 
 import (
 	"reflect"
