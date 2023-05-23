@@ -1,7 +1,8 @@
-package leetcode
+package FindCommonCharacters
 
 import (
 	"reflect"
+	"sort"
 	"testing"
 )
 
@@ -11,14 +12,15 @@ type commonCharsTestPair struct {
 }
 
 var commonCharsTestCases = []commonCharsTestPair{
-	// random test cases
-	// {[]string{"bella", "label", "roller"}, []string{"e", "l", "l"}},
-	// {[]string{"cool", "lock", "cook"}, []string{"c", "o"}},
+	{[]string{"bella", "label", "roller"}, []string{"e", "l", "l"}},
+	{[]string{"cool", "lock", "cook"}, []string{"c", "o"}},
 }
 
 func TestEvalCommonChars(t *testing.T) {
 	for _, pair := range commonCharsTestCases {
-		var newOut = commonChars(pair.input)
+		newOut := commonChars(pair.input)
+		sort.Strings(newOut)
+		sort.Strings(pair.out)
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
 				"For", pair.input,

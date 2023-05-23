@@ -1,11 +1,15 @@
-package leetcode
+package FindCommonCharacters
+
+import "leetcode/utils"
+
+var StringToHashmapRune = utils.StringToHashmapRune
 
 func commonChars(words []string) []string {
 	var out []string
-	var hash = stringToHashmapRune(words[0])
+	hash := StringToHashmapRune(words[0])
 
 	for _, word := range words {
-		var newHash = stringToHashmapRune(word)
+		newHash := StringToHashmapRune(word)
 		for key := range hash {
 			if hash[key] > newHash[key] {
 				hash[key] = newHash[key]
