@@ -1,4 +1,4 @@
-package leetcode
+package CountNumberOfPairsWithAbsoluteDifferenceK
 
 import (
 	"reflect"
@@ -19,7 +19,7 @@ var countKDifferenceTestCases = []countKDifferenceTestPair{
 
 func TestEvalCountKDifference(t *testing.T) {
 	for _, pair := range countKDifferenceTestCases {
-		var newOut = countKDifference(pair.inputNums, pair.inputK)
+		newOut := countKDifference(pair.inputNums, pair.inputK)
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
 				"For", pair.inputNums,
