@@ -1,4 +1,4 @@
-package leetcode
+package BuddyStrings
 
 import (
 	"reflect"
@@ -19,7 +19,7 @@ var buddyStringsTestCases = []buddyStringsTestPair{
 
 func TestEvalBuddyStrings(t *testing.T) {
 	for _, pair := range buddyStringsTestCases {
-		var newOut = buddyStrings(pair.inputS, pair.inputGoal)
+		newOut := buddyStrings(pair.inputS, pair.inputGoal)
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
 				"For", pair.inputS,

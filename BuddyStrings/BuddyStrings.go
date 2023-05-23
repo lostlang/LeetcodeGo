@@ -1,18 +1,22 @@
-package leetcode
+package BuddyStrings
 
 import (
 	"reflect"
+
+	"leetcode/utils"
 )
 
+var StringToHashmapByte = utils.StringToHashmapByte
+
 func buddyStrings(s string, goal string) bool {
-	var hashS = stringToHashmapByte(s)
-	var hashG = stringToHashmapByte(goal)
+	hashS := StringToHashmapByte(s)
+	hashG := StringToHashmapByte(goal)
 
 	if !reflect.DeepEqual(hashS, hashG) {
 		return false
 	}
 
-	var diff = 0
+	diff := 0
 
 	for i := 0; i < len(s); i++ {
 		if s[i] != goal[i] {
