@@ -1,4 +1,4 @@
-package leetcode
+package BuildArrayFromPermutation
 
 import (
 	"reflect"
@@ -17,7 +17,7 @@ var buildArrayTestCases = []buildArrayTestPair{
 
 func TestEvalBuildArray(t *testing.T) {
 	for _, pair := range buildArrayTestCases {
-		var newOut = buildArray(pair.input)
+		newOut := buildArray(pair.input)
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
 				"For", pair.input,
