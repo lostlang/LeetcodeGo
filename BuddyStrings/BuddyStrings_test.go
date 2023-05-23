@@ -22,8 +22,7 @@ func TestEvalBuddyStrings(t *testing.T) {
 		newOut := buddyStrings(pair.inputS, pair.inputGoal)
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
-				"For", pair.inputS,
-				"and", pair.inputGoal,
+				"For", pair.inputS, pair.inputGoal,
 				"expected", pair.out,
 				"got", newOut,
 			)
