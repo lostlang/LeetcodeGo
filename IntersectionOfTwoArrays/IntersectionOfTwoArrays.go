@@ -1,8 +1,12 @@
-package leetcode
+package IntersectionOfTwoArrays
+
+import "leetcode/utils"
+
+var IntToHash = utils.IntToHash
 
 func intersection(nums1 []int, nums2 []int) []int {
-	var hash1 = intToHash(nums1)
-	var hash2 = intToHash(nums2)
+	hash1 := IntToHash(nums1)
+	hash2 := IntToHash(nums2)
 	var out []int
 	var min int
 
