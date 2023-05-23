@@ -1,4 +1,4 @@
-package leetcode
+package SingleNumber
 
 import (
 	"reflect"
@@ -18,7 +18,7 @@ var singleNumberTestCases = []singleNumberTestPair{
 
 func TestEvalSingleNumber(t *testing.T) {
 	for _, pair := range singleNumberTestCases {
-		var newOut = singleNumber(pair.input)
+		newOut := singleNumber(pair.input)
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
 				"For", pair.input,

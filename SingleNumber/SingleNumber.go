@@ -1,7 +1,11 @@
-package leetcode
+package SingleNumber
+
+import "leetcode/utils"
+
+var IntToHash = utils.IntToHash
 
 func singleNumber(nums []int) int {
-	var hash = intToHash(nums)
+	hash := IntToHash(nums)
 
 	for i, val := range hash {
 		if val == 1 {
