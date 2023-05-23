@@ -1,14 +1,18 @@
-package leetcode
+package BinaryTreeRightSideView
+
+import "leetcode/utils"
+
+type TreeNode = utils.TreeNode
 
 func rightSideView(root *TreeNode) []int {
-	var out = []int{}
+	out := []int{}
 
 	if root == nil {
 		return out
 	}
 
-	var currentLevel = []*TreeNode{root}
-	var nextLevel = []*TreeNode{}
+	currentLevel := []*TreeNode{root}
+	nextLevel := []*TreeNode{}
 
 	for len(currentLevel) != 0 {
 
