@@ -22,8 +22,7 @@ func TestEvalCountKDifference(t *testing.T) {
 		newOut := countKDifference(pair.inputNums, pair.inputK)
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
-				"For", pair.inputNums,
-				"and", pair.inputK,
+				"For", pair.inputNums, pair.inputK,
 				"expected", pair.out,
 				"got", newOut,
 			)
