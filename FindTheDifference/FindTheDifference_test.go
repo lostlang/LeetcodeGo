@@ -1,4 +1,4 @@
-package leetcode
+package FindTheDifference
 
 import (
 	"reflect"
@@ -18,11 +18,10 @@ var findTheDifferenceTestCases = []findTheDifferenceTestPair{
 
 func TestEvalFindTheDifference(t *testing.T) {
 	for _, pair := range findTheDifferenceTestCases {
-		var newOut = findTheDifference(pair.inputS, pair.inputT)
+		newOut := findTheDifference(pair.inputS, pair.inputT)
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
-				"For", pair.inputS,
-				"and", pair.inputT,
+				"For", pair.inputS, pair.inputT,
 				"expected", pair.out,
 				"got", newOut,
 			)
