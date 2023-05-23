@@ -1,4 +1,4 @@
-package leetcode
+package BinaryTreesWithFactors
 
 import (
 	"reflect"
@@ -17,7 +17,7 @@ var numFactoredBinaryTreesTestCases = []numFactoredBinaryTreesTestPair{
 
 func TestEvalNumFactoredBinaryTrees(t *testing.T) {
 	for _, pair := range numFactoredBinaryTreesTestCases {
-		var newOut = numFactoredBinaryTrees(pair.input)
+		newOut := numFactoredBinaryTrees(pair.input)
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
 				"For", pair.input,
