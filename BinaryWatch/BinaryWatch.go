@@ -1,4 +1,4 @@
-package leetcode
+package BinaryWatch
 
 import (
 	"math/bits"
@@ -14,7 +14,7 @@ func readBinaryWatch(turnedOn int) []string {
 		return []string{}
 	}
 
-	var out = []string{}
+	out := []string{}
 
 	for hour := 0; hour < 12; hour++ {
 		for minute := 0; minute < 10; minute++ {

@@ -1,4 +1,4 @@
-package leetcode
+package BinaryWatch
 
 import (
 	"reflect"
@@ -18,7 +18,7 @@ var readBinaryWatchTestCases = []readBinaryWatchTestPair{
 
 func TestEvalReadBinaryWatch(t *testing.T) {
 	for _, pair := range readBinaryWatchTestCases {
-		var newOut = readBinaryWatch(pair.input)
+		newOut := readBinaryWatch(pair.input)
 		if !reflect.DeepEqual(newOut, pair.out) {
 			t.Error(
 				"For", pair.input,
