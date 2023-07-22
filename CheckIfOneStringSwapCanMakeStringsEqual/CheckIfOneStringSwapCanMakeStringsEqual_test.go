@@ -1,4 +1,4 @@
-package leetcode
+package CheckIfOneStringSwapCanMakeStringsEqual
 
 import (
 	"reflect"
@@ -8,7 +8,7 @@ import (
 type areAlmostEqualTestPair struct {
 	inputS1 string
 	inputS2 string
-	out     bool
+	output  bool
 }
 
 var areAlmostEqualTestCases = []areAlmostEqualTestPair{
@@ -19,12 +19,11 @@ var areAlmostEqualTestCases = []areAlmostEqualTestPair{
 
 func TestEvalAreAlmostEqual(t *testing.T) {
 	for _, pair := range areAlmostEqualTestCases {
-		var newOut = areAlmostEqual(pair.inputS1, pair.inputS2)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOut := areAlmostEqual(pair.inputS1, pair.inputS2)
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
-				"For", pair.inputS1,
-				"and", pair.inputS2,
-				"expected", pair.out,
+				"For", pair.inputS1, pair.inputS2,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}

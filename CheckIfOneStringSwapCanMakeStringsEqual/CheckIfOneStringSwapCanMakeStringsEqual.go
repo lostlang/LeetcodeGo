@@ -1,8 +1,8 @@
-package leetcode
+package CheckIfOneStringSwapCanMakeStringsEqual
 
 func areAlmostEqual(s1 string, s2 string) bool {
-	var r1 = []rune(s1)
-	var r2 = []rune(s2)
+	r1 := []rune(s1)
+	r2 := []rune(s2)
 	var notEq []int
 
 	if len(r1) != len(r2) {
