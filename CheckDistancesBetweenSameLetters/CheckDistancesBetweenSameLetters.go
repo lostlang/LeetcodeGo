@@ -1,11 +1,11 @@
-package leetcode
+package CheckDistancesBetweenSameLetters
 
 func checkDistances(s string, distance []int) bool {
-	var rS = []rune(s)
+	rS := []rune(s)
 
 	for i, char := range rS {
 		if char >= 'a' {
-			var next = i + distance[int(char-'a')] + 1
+			next := i + distance[int(char-'a')] + 1
 			if next >= len(rS) || char != rS[next] {
 				return false
 			} else {

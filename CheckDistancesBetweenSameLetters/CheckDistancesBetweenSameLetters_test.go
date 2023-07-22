@@ -1,4 +1,4 @@
-package leetcode
+package CheckDistancesBetweenSameLetters
 
 import (
 	"reflect"
@@ -8,7 +8,7 @@ import (
 type checkDistancesTestPair struct {
 	inputS        string
 	inputDistance []int
-	out           bool
+	output        bool
 }
 
 var checkDistancesTestCases = []checkDistancesTestPair{
@@ -18,12 +18,11 @@ var checkDistancesTestCases = []checkDistancesTestPair{
 
 func TestEvalCheckDistances(t *testing.T) {
 	for _, pair := range checkDistancesTestCases {
-		var newOut = checkDistances(pair.inputS, pair.inputDistance)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOut := checkDistances(pair.inputS, pair.inputDistance)
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
-				"For", pair.inputS,
-				"and", pair.inputDistance,
-				"expected", pair.out,
+				"For", pair.inputS, pair.inputDistance,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}
