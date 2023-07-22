@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
-      - run: go test -v
+      - run: go test ./... -v
