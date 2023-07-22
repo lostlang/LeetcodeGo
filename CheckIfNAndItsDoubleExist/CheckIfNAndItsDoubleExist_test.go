@@ -1,4 +1,4 @@
-package leetcode
+package CheckIfNAndItsDoubleExist
 
 import (
 	"reflect"
@@ -6,8 +6,8 @@ import (
 )
 
 type checkIfExistTestPair struct {
-	input []int
-	out   bool
+	input  []int
+	output bool
 }
 
 var checkIfExistTestCases = []checkIfExistTestPair{
@@ -18,11 +18,11 @@ var checkIfExistTestCases = []checkIfExistTestPair{
 
 func TestEvalCheckIfExist(t *testing.T) {
 	for _, pair := range checkIfExistTestCases {
-		var newOut = checkIfExist(pair.input)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOut := checkIfExist(pair.input)
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
 				"For", pair.input,
-				"expected", pair.out,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}

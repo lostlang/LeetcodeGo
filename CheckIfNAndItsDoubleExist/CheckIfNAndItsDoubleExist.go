@@ -1,7 +1,7 @@
-package leetcode
+package CheckIfNAndItsDoubleExist
 
 func checkIfExist(arr []int) bool {
-	var hash = make(map[int]bool)
+	hash := make(map[int]bool)
 	var count int
 
 	for _, val := range arr {
