@@ -1,4 +1,4 @@
-package leetcode
+package CellsInARangeOnAnExcelSheet
 
 import (
 	"reflect"
@@ -6,8 +6,8 @@ import (
 )
 
 type cellsInRangeTestPair struct {
-	input string
-	out   []string
+	input  string
+	output []string
 }
 
 var cellsInRangeTestCases = []cellsInRangeTestPair{
@@ -17,11 +17,11 @@ var cellsInRangeTestCases = []cellsInRangeTestPair{
 
 func TestEvalCellsInRange(t *testing.T) {
 	for _, pair := range cellsInRangeTestCases {
-		var newOut = cellsInRange(pair.input)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOut := cellsInRange(pair.input)
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
 				"For", pair.input,
-				"expected", pair.out,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}

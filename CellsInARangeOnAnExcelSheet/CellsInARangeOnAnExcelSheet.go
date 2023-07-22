@@ -1,8 +1,8 @@
-package leetcode
+package CellsInARangeOnAnExcelSheet
 
 func cellsInRange(s string) []string {
 	var out []string
-	var rS = []rune(s)
+	rS := []rune(s)
 	var start, end [2]rune
 
 	start[0] = rS[0]
