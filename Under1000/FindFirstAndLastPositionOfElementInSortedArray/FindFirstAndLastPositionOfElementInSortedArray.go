@@ -1,7 +1,7 @@
 package FindFirstAndLastPositionOfElementInSortedArray
 
 import (
-	"leetcode/BinarySearch"
+	"leetcode/Under1000/BinarySearch"
 )
 
 var search = BinarySearch.Search
