@@ -3,7 +3,7 @@ package SearchA2DMatrixII
 import (
 	"sort"
 
-	"leetcode/BinarySearch"
+	"leetcode/Under1000/BinarySearch"
 )
 
 var search = BinarySearch.Search
