@@ -1,4 +1,4 @@
-package leetcode
+package CheckIfTheSentenceIsPangram
 
 func checkIfPangram(sentence string) bool {
 	output := false

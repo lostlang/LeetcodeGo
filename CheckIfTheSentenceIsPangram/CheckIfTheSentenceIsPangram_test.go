@@ -1,4 +1,4 @@
-package leetcode
+package CheckIfTheSentenceIsPangram
 
 import (
 	"reflect"
@@ -6,8 +6,8 @@ import (
 )
 
 type checkIfPangramTestPair struct {
-	input string
-	out   bool
+	input  string
+	output bool
 }
 
 var checkIfPangramTestCases = []checkIfPangramTestPair{
@@ -18,10 +18,10 @@ var checkIfPangramTestCases = []checkIfPangramTestPair{
 func TestEvalCheckIfPangram(t *testing.T) {
 	for _, pair := range checkIfPangramTestCases {
 		newOut := checkIfPangram(pair.input)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
 				"For", pair.input,
-				"expected", pair.out,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}
