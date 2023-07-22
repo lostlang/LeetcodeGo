@@ -1,4 +1,4 @@
-package leetcode
+package CanMakeArithmeticProgressionFromSequence
 
 import (
 	"reflect"
@@ -6,8 +6,8 @@ import (
 )
 
 type canMakeArithmeticProgressionTestPair struct {
-	input []int
-	out   bool
+	input  []int
+	output bool
 }
 
 var canMakeArithmeticProgressionTestCases = []canMakeArithmeticProgressionTestPair{
@@ -17,11 +17,11 @@ var canMakeArithmeticProgressionTestCases = []canMakeArithmeticProgressionTestPa
 
 func TestEvalCanMakeArithmeticProgression(t *testing.T) {
 	for _, pair := range canMakeArithmeticProgressionTestCases {
-		var newOut = canMakeArithmeticProgression(pair.input)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOut := canMakeArithmeticProgression(pair.input)
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
 				"For", pair.input,
-				"expected", pair.out,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}
