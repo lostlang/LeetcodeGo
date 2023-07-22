@@ -1,4 +1,4 @@
-package leetcode
+package CalculateMoneyInLeetcodeBank
 
 import (
 	"reflect"
@@ -6,8 +6,8 @@ import (
 )
 
 type totalMoneyTestPair struct {
-	input int
-	out   int
+	input  int
+	output int
 }
 
 var totalMoneyTestCases = []totalMoneyTestPair{
@@ -18,11 +18,11 @@ var totalMoneyTestCases = []totalMoneyTestPair{
 
 func TestEvalTotalMoney(t *testing.T) {
 	for _, pair := range totalMoneyTestCases {
-		var newOut = totalMoney(pair.input)
-		if !reflect.DeepEqual(newOut, pair.out) {
+		newOut := totalMoney(pair.input)
+		if !reflect.DeepEqual(newOut, pair.output) {
 			t.Error(
 				"For", pair.input,
-				"expected", pair.out,
+				"expected", pair.output,
 				"got", newOut,
 			)
 		}
